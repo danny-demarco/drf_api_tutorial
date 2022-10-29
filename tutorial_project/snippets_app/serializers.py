@@ -9,6 +9,12 @@ from snippets_app.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
     circumstances, such as when rendering to HTML. The {'base_template': 'textarea.html'} 
     flag above is equivalent to using widget=widgets.Textarea on a Django Form class. 
     This is particularly useful for controlling how the browsable API should be displayed.
+
+    We can also serialize querysets instead of model instances. To do so we simply add a 
+    many=True flag to the serializer arguments.
+
+    When using modelSerializers, we can print a representation of them in the shell using
+    print(repr(serializer))
 """
 
 # class SnippetSerializer(serializers.Serializer):
